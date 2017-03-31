@@ -7,7 +7,7 @@
     <title>My AngularJS App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body ng-app="app">
 
@@ -27,8 +27,9 @@
 
         <button type="submit" class="btn btn-primary" ng-click="contatoController.adicionarContato()">Salvar</button>
     </form>
-
-    <table class="table">
+    <hr>
+    <h3 ng-show="contatoController.contatos.length == 0">Nao ha contatos cadastrados.</h3>
+    <table class="table" ng-show="contatoController.contatos.length > 0">
         <thead>
         <tr>
             <th>Nome</th>
@@ -52,11 +53,11 @@
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../libs/angular/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/tether/dist/js/tether.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../libs/jquery/dist/jquery.min.js"></script>
+<script src="../libs/tether/dist/js/tether.min.js"></script>
+<script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="app.js"></script>
 <script src="controller/ContatoController.js"></script>
 </body>
