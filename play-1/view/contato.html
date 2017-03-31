@@ -1,0 +1,15 @@
+<section class="container" ng-controller="ContatoController as contatoController">
+    <h1>Contatos</h1>
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" placeholder="José Silva" ng-model="contatoController.contato.nome">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" class="form-control" placeholder="(11) 91234-5678" ng-model="contatoController.contato.telefone">
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-click="contatoController.adicionarContato()">Salvar</button>
+    </form>
+</section>
